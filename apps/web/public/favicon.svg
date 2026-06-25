@@ -1,0 +1,8 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#001F3F"/>
+  <!-- Elegant Chef Hat / Crown with Gold Accents -->
+  <path d="M32 12c-4.5 0-8.2 3.6-8.2 8.1 0 1.2.3 2.3.7 3.3C21 24.9 18.5 28.3 18.5 32.5c0 5 3.8 9.2 8.7 9.8v5.7h9.6v-5.7c4.9-.6 8.7-4.8 8.7-9.8 0-4.2-2.5-7.6-6-9.1.5-1 .7-2.1.7-3.3C40.2 15.6 36.5 12 32 12z" fill="#D4AF37"/>
+  <!-- Decorative Cutlery Accents -->
+  <path d="M26 38v4h2v-4h-2zm10 0v4h2v-4h-2z" fill="#001F3F"/>
+</svg>

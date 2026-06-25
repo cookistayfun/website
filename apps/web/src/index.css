@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* CHEF TY™ Brand Colors */
+    /* Navy Blue: #001F3F -> 210 100% 12% */
+    /* Gold: #D4AF37 -> 46 65% 52% */
+    /* Off-White: #F9F9FA -> 210 14% 98% */
+    
+    --background: 210 14% 98%;
+    --foreground: 210 100% 12%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 12%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 12%;
+    
+    --primary: 210 100% 12%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 46 65% 52%;
+    --secondary-foreground: 210 100% 12%;
+    
+    --muted: 210 20% 90%;
+    --muted-foreground: 210 20% 40%;
+    
+    --accent: 46 65% 52%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 20% 86%;
+    --input: 210 20% 86%;
+    --ring: 46 65% 52%;
+    
+    --radius: 0.25rem;
+  }
+  
+  .dark {
+    --background: 210 100% 10%;
+    --foreground: 210 14% 98%;
+    
+    --card: 210 100% 12%;
+    --card-foreground: 210 14% 98%;
+    
+    --popover: 210 100% 12%;
+    --popover-foreground: 210 14% 98%;
+    
+    --primary: 46 65% 52%;
+    --primary-foreground: 210 100% 12%;
+    
+    --secondary: 210 50% 20%;
+    --secondary-foreground: 210 14% 98%;
+    
+    --muted: 210 50% 20%;
+    --muted-foreground: 210 20% 70%;
+    
+    --accent: 46 65% 52%;
+    --accent-foreground: 210 100% 12%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 14% 98%;
+    
+    --border: 210 50% 20%;
+    --input: 210 50% 20%;
+    --ring: 46 65% 52%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  
+  p {
+    text-wrap: pretty;
+    line-height: 1.7;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Gallery Specific Base Styles */
+@layer components {
+  .gallery-item {
+    @apply relative overflow-hidden rounded-sm bg-muted transform-gpu;
+  }
+
+  .gallery-item.aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery-item.aspect-portrait {
+    aspect-ratio: 3 / 4;
+  }
+
+  .gallery-item.aspect-landscape {
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-image {
+    @apply w-full h-full object-cover transition-transform duration-700 ease-out will-change-transform;
+  }
+
+  .gallery-item:hover .gallery-image {
+    @apply scale-105;
+  }
+
+  .gallery-overlay {
+    @apply absolute inset-0 bg-[#001F3F]/0 transition-colors duration-500 ease-out pointer-events-none;
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    @apply bg-[#001F3F]/20;
+  }
+
+  /* Subtly glow/border for gold accent */
+  .gallery-item::after {
+    content: '';
+    @apply absolute inset-0 border-2 border-transparent transition-colors duration-500 pointer-events-none rounded-sm;
+  }
+
+  .gallery-item:hover::after {
+    @apply border-[#D4AF37]/50;
+  }
+}

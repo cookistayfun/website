@@ -195,12 +195,13 @@ const HomePage = () => {
 
   // Mixed 6 images from the expanded 20-image collection
   const galleryImages = [
-    { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/c44ecfd82689ce2ff91ff4f6232253a3.jpg", alt: "Culinary Dish - Salmon Appetizer" },
-    { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/59088184c649c9ea76082088e8c8210d.jpg", alt: "Elegant fine dining dessert plate with white wine glass" },
-    { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/0b9c745779fa42177b5106a8b0cede43.jpg", alt: "Culinary Dish - Seared Steak" },
-    { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/11df65621a8c8e4455d7e225503275e4.jpg", alt: "Professional catering setup with chef and multiple plated dishes" },
-    { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/022b23f8a5643b9b2f9580f1d990a384.jpg", alt: "Fresh salad with raspberries served by poolside" },
-    { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/a734cc5ac403f939848de5f11ea67b72.jpg", alt: "Chef Ty in Kitchen" }
+    { src: "/new1.jpeg", alt: "Chef plating chocolate desserts in a professional kitchen" },
+    { src: "/new2.jpeg", alt: "Luxury charcuterie board catering spread" },
+    { src: "/new3.jpeg", alt: "Gourmet charcuterie board on marble serving platter" },
+    { src: "/Screenshot%202026-06-25%20at%2010.51.18%E2%80%AFPM.png", alt: "Gourmet chocolate soufflé with dessert sauce" },
+    { src: "/Screenshot%202026-06-25%20at%2010.51.31%E2%80%AFPM.png", alt: "Shrimp cocktail appetizer with fresh dill garnish" },
+    { src: "/Screenshot%202026-06-25%20at%2010.51.44%E2%80%AFPM.png", alt: "Fresh gourmet mixed vegetable salad" },
+    { src: "/Screenshot%202026-06-25%20at%2010.53.13%E2%80%AFPM.png", alt: "Pan-seared scallops with herb gremolata" },
   ];
 
   const certifications = [

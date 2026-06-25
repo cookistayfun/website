@@ -16,28 +16,13 @@ const staggerContainer = {
 };
 
 const galleryImages = [
-  // Original 10 Images
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/c44ecfd82689ce2ff91ff4f6232253a3.jpg", alt: "Culinary Dish - Salmon Appetizer" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/330f603b4719bd36e0758ba8b0720317.jpg", alt: "Culinary Dish - Tuna Tartare" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/0b9c745779fa42177b5106a8b0cede43.jpg", alt: "Culinary Dish - Seared Steak" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/036da6f8ee0828d547a09dc1fd9287e9.jpg", alt: "Culinary Dish - Seafood Appetizer" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/455db2611fbbe95d135cac6751baa474.jpg", alt: "Culinary Dish - Tuna Sushi" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/a734cc5ac403f939848de5f11ea67b72.jpg", alt: "Chef Ty in Kitchen" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/ad03d8b1007245f939848de5f11ea67b72.jpg", alt: "Culinary Presentation" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/1309f4ef2d3ba4776ad8c08586fb5185.jpg", alt: "Elegant Dish Preparation" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/3db36d7ae9b8ff169780fa26765141ef.jpg", alt: "Gourmet Culinary Experience" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/2eb9b8c4e13cdeec434bc2dc99f502e4.jpg", alt: "Luxury Private Chef Dining" },
-  // New 10 Images
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/f983cd6cd414bf4c880674a05a625410.jpg", alt: "TV screen display showing Chef Ty at Star Theater event" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/166451958aba452df2c8de95d0a6df6f.jpg", alt: "TV screen display showing two chefs at Star Theater event" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/11df65621a8c8e4455d7e225503275e4.jpg", alt: "Professional catering setup with chef and multiple plated dishes" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/59088184c649c9ea76082088e8c8210d.jpg", alt: "Elegant fine dining dessert plate with white wine glass" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/80eb31f6d19816e19a4afbffc55d6bbd.jpg", alt: "Gourmet seafood dish with scallop and artistic plating" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/f789aa5ef5095f0cc915b7943ff3cddd.jpg", alt: "Tasting flight of colorful beverages and sauces" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/34a6ac96dd12c63bd7305ee621a8944c.jpg", alt: "Artistic plated dish with red sauce and garnishes on burgundy plate" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/3dd973f8f32ad1d463bcda2fc2742392.jpg", alt: "Professional kitchen team of four chefs at catering event" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/3ca19d0cb0a8c1bad696dff00c0556a6.jpg", alt: "Three professional chefs at luxury catering event" },
-  { src: "https://horizons-cdn.hostinger.com/faa0a94a-a986-4d59-9827-052429046263/022b23f8a5643b9b2f9580f1d990a384.jpg", alt: "Fresh salad with raspberries served by poolside" }
+  { src: "/new1.jpeg", alt: "Chef plating chocolate desserts in a professional kitchen" },
+  { src: "/new2.jpeg", alt: "Luxury charcuterie board catering spread" },
+  { src: "/new3.jpeg", alt: "Gourmet charcuterie board on marble serving platter" },
+  { src: "/Screenshot%202026-06-25%20at%2010.51.18%E2%80%AFPM.png", alt: "Gourmet chocolate soufflé with dessert sauce" },
+  { src: "/Screenshot%202026-06-25%20at%2010.51.31%E2%80%AFPM.png", alt: "Shrimp cocktail appetizer with fresh dill garnish" },
+  { src: "/Screenshot%202026-06-25%20at%2010.51.44%E2%80%AFPM.png", alt: "Fresh gourmet mixed vegetable salad" },
+  { src: "/Screenshot%202026-06-25%20at%2010.53.13%E2%80%AFPM.png", alt: "Pan-seared scallops with herb gremolata" },
 ];
 
 const GalleryPage = () => {

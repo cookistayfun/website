@@ -16,14 +16,22 @@ const staggerContainer = {
 };
 
 const galleryImages = [
-  { src: "/new1.jpeg", alt: "Chef plating chocolate desserts in a professional kitchen" },
-  { src: "/new2.jpeg", alt: "Luxury charcuterie board catering spread" },
-  { src: "/new3.jpeg", alt: "Gourmet charcuterie board on marble serving platter" },
-  { src: "/Screenshot%202026-06-25%20at%2010.51.18%E2%80%AFPM.png", alt: "Gourmet chocolate soufflé with dessert sauce" },
-  { src: "/Screenshot%202026-06-25%20at%2010.51.31%E2%80%AFPM.png", alt: "Shrimp cocktail appetizer with fresh dill garnish" },
-  { src: "/Screenshot%202026-06-25%20at%2010.51.44%E2%80%AFPM.png", alt: "Fresh gourmet mixed vegetable salad" },
-  { src: "/Screenshot%202026-06-25%20at%2010.53.13%E2%80%AFPM.png", alt: "Pan-seared scallops with herb gremolata" },
+  { type: "image", src: "/new1.jpeg", alt: "Chef plating chocolate desserts in a professional kitchen" },
+  { type: "image", src: "/new2.jpeg", alt: "Luxury charcuterie board catering spread" },
+  { type: "image", src: "/new3.jpeg", alt: "Gourmet charcuterie board on marble serving platter" },
+  { type: "image", src: "/Screenshot%202026-06-25%20at%2010.51.18%E2%80%AFPM.png", alt: "Gourmet chocolate soufflé with dessert sauce" },
+  { type: "image", src: "/Screenshot%202026-06-25%20at%2010.51.31%E2%80%AFPM.png", alt: "Shrimp cocktail appetizer with fresh dill garnish" },
+  { type: "image", src: "/Screenshot%202026-06-25%20at%2010.51.44%E2%80%AFPM.png", alt: "Fresh gourmet mixed vegetable salad" },
+  { type: "image", src: "/Screenshot%202026-06-25%20at%2010.53.13%E2%80%AFPM.png", alt: "Pan-seared scallops with herb gremolata" },
 ];
+
+const galleryVideos = Array.from({ length: 21 }, (_, i) => ({
+  type: "video",
+  src: `/${i + 1}.mp4`,
+  alt: `CHEF TY culinary showcase video ${i + 1}`,
+}));
+
+const galleryItems = [...galleryImages, ...galleryVideos];
 
 const GalleryPage = () => {
   return (
@@ -58,19 +66,31 @@ const GalleryPage = () => {
           animate="visible"
           className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
         >
-          {galleryImages.map((img, i) => (
+          {galleryItems.map((item, i) => (
             <motion.div 
-              key={i} 
+              key={`${item.type}-${item.src}`} 
               variants={fadeIn} 
               className="break-inside-avoid gallery-item"
             >
-              <img 
-                src={img.src} 
-                alt={img.alt} 
-                className="gallery-image"
-                loading="lazy"
-              />
-              <div className="gallery-overlay" />
+              {item.type === "video" ? (
+                <video
+                  src={item.src}
+                  className="gallery-image w-full"
+                  controls
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-label={item.alt}
+                />
+              ) : (
+                <img 
+                  src={item.src} 
+                  alt={item.alt} 
+                  className="gallery-image"
+                  loading="lazy"
+                />
+              )}
+              <div className="gallery-overlay pointer-events-none" />
             </motion.div>
           ))}
         </motion.div>

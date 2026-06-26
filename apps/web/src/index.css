@@ -138,6 +138,10 @@
     @apply scale-105;
   }
 
+  .gallery-item:hover video.gallery-image {
+    @apply scale-100;
+  }
+
   .gallery-overlay {
     @apply absolute inset-0 bg-[#001F3F]/0 transition-colors duration-500 ease-out pointer-events-none;
   }

@@ -193,16 +193,10 @@ const HomePage = () => {
     { icon: FileText, title: "Menu Development & Culinary Consulting", desc: "Restaurant menu development, kitchen consulting, food cost management, and culinary training." }
   ];
 
-  // Mixed 6 images from the expanded 20-image collection
-  const galleryImages = [
-    { src: "/new1.jpeg", alt: "Chef plating chocolate desserts in a professional kitchen" },
-    { src: "/new2.jpeg", alt: "Luxury charcuterie board catering spread" },
-    { src: "/new3.jpeg", alt: "Gourmet charcuterie board on marble serving platter" },
-    { src: "/Screenshot%202026-06-25%20at%2010.51.18%E2%80%AFPM.png", alt: "Gourmet chocolate soufflé with dessert sauce" },
-    { src: "/Screenshot%202026-06-25%20at%2010.51.31%E2%80%AFPM.png", alt: "Shrimp cocktail appetizer with fresh dill garnish" },
-    { src: "/Screenshot%202026-06-25%20at%2010.51.44%E2%80%AFPM.png", alt: "Fresh gourmet mixed vegetable salad" },
-    { src: "/Screenshot%202026-06-25%20at%2010.53.13%E2%80%AFPM.png", alt: "Pan-seared scallops with herb gremolata" },
-  ];
+  const homeGalleryVideos = Array.from({ length: 9 }, (_, i) => ({
+    src: `/${i + 1}.mp4`,
+    alt: `CHEF TY culinary showcase video ${i + 1}`,
+  }));
 
   const certifications = [
     { title: "ServSafe Food Protection Manager", status: "completed" },
@@ -411,17 +405,20 @@ const HomePage = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 justify-items-center max-w-5xl mx-auto"
           >
-            {galleryImages.map((img, i) => (
-              <motion.div key={i} variants={fadeIn} className="gallery-item aspect-square">
-                <img 
-                  src={img.src} 
-                  alt={img.alt} 
-                  className="gallery-image"
-                  loading="lazy"
+            {homeGalleryVideos.map((video) => (
+              <motion.div key={video.src} variants={fadeIn} className="gallery-item aspect-video-portrait w-full max-w-[220px] sm:max-w-[260px]">
+                <video
+                  src={video.src}
+                  className="gallery-image w-full h-full object-cover"
+                  controls
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-label={video.alt}
                 />
-                <div className="gallery-overlay" />
+                <div className="gallery-overlay pointer-events-none" />
               </motion.div>
             ))}
           </motion.div>

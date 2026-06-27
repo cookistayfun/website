@@ -405,10 +405,14 @@ const HomePage = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 justify-items-center max-w-5xl mx-auto"
+            className="flex flex-wrap justify-center gap-6 mb-12"
           >
             {homeGalleryVideos.map((video) => (
-              <motion.div key={video.src} variants={fadeIn} className="gallery-item aspect-video-portrait w-full max-w-[220px] sm:max-w-[260px]">
+              <motion.div
+                key={video.src}
+                variants={fadeIn}
+                className="gallery-item aspect-video-portrait w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+              >
                 <video
                   src={video.src}
                   className="gallery-image w-full h-full object-cover"

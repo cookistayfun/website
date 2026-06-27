@@ -219,7 +219,7 @@ const HomePage = () => {
       <section id="home" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1638967394692-2d7cec6f3c4b" 
+            src="/hero.jpeg" 
             alt="Luxury Private Chef Services" 
             className="w-full h-full object-cover"
           />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -16,15 +16,26 @@ const Footer = () => {
             <p className="text-white/70 text-sm max-w-sm leading-relaxed mb-8">
               Bringing world-class culinary experiences, professional hospitality, and unforgettable events to our discerning clients.
             </p>
-            <a 
-              href="https://instagram.com/nyglnculinary" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#D4AF37] hover:border-[#D4AF37] hover:text-[#001F3F] transition-all duration-300" 
-              aria-label="Instagram"
-            >
-              <Instagram className="w-4 h-4" />
-            </a>
+            <div className="flex items-center gap-3">
+              <a 
+                href="https://instagram.com/nyglnculinary" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#D4AF37] hover:border-[#D4AF37] hover:text-[#001F3F] transition-all duration-300" 
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/tayfun-tarakcioglu-8234aa55/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#D4AF37] hover:border-[#D4AF37] hover:text-[#001F3F] transition-all duration-300" 
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           <div className="flex flex-col items-center md:items-start">

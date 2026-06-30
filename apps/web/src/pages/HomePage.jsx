@@ -286,7 +286,7 @@ const HomePage = () => {
               </p>
               <p className="p-6 bg-card border border-border shadow-sm mt-8 italic text-foreground rounded-sm relative">
                 <span className="absolute top-0 left-0 w-1 h-full bg-[#D4AF37]" />
-                NY GLN Culinary LLC is a Long Island–based private chef and catering company specializing in luxury private dining, corporate events, cocktail receptions, holiday parties, and customized culinary experiences. The company focuses on fresh ingredients, elegant presentation, and personalized service for every client.
+                NY GLN Culinary Group LLC is a Long Island–based private chef and catering company specializing in luxury private dining, corporate events, cocktail receptions, holiday parties, and customized culinary experiences. The company focuses on fresh ingredients, elegant presentation, and personalized service for every client.
               </p>
             </div>
           </motion.div>
